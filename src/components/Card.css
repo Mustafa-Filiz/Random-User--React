@@ -15,8 +15,12 @@ body{
     height: 600px;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,215,255,1) 70%, rgba(33,146,255,1) 100%);
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid black;
+}
+
+#pp{
+    border-radius: 50%;
 }
 
 .box{
@@ -41,6 +45,9 @@ body{
 }
 
 p{
-    width: 200px;
+    width: 300px;
     text-align: center;
+    font-size: 1.1rem;
+    margin: 0;
 }
+
