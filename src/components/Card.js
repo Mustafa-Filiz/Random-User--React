@@ -8,6 +8,7 @@ import axios from 'axios'
 const Card = () => {
     const [item, setItem] = useState("");
     const [refresh, setRefresh] = useState(true);
+
     useEffect(() => {
         axios.get("https://randomuser.me/api/")
         .then(res => setItem(res.data.results[0]))
@@ -19,24 +20,24 @@ const Card = () => {
         <div className="d-flex flex-column justify-content-center">
             <div className="card">
                 <div className="box">
-                    <img id="pp" src={item.picture.large} alt="pp" />
-                    <h1>{item.name.title} {item.name.first} {item.name.last}</h1>
+                    <img id="pp" src={item?.picture?.large} alt="pp" />
+                    <h1>{item?.name?.title} {item?.name?.first} {item?.name?.last}</h1>
                 </div>
                 <div className="box">
                     <img className="icon" src={emailIcon} alt="email" />
-                    <p>{item.email}</p>
+                    <p>{item?.email}</p>
                 </div>
                 <div className="box">
                     <img className="icon" src={phoneIcon} alt="phone" />
-                    <p>{item.phone}</p>
+                    <p>{item?.phone}</p>
                 </div>
                 <div className="box">
                     <img className="icon" src={locationIcon} alt="location" />
-                    <p>{item.location.city} / {item.location.country}</p>
+                    <p>{item?.location?.city} / {item?.location?.country}</p>
                 </div>
                 <div className="footer">
-                    <p>Age: {item.dob.age}</p>
-                    <p>Registration Date : {item.registered.date.slice(0,10)}</p>
+                    <p>Age: {item?.dob?.age}</p>
+                    <p>Registration Date : {item?.registered?.date.slice(0,10)}</p>
                 </div>
             </div>
 
